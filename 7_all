@@ -1,0 +1,233 @@
+7a
+calsi
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Calculator</title>
+
+    <style>
+        .calculator {
+            width: 260px;
+            border: 2px solid black;
+            margin: auto;
+            padding: 5px;
+        }
+
+        input {
+            width: 245px;
+            height: 50px;
+            font-size: 30px;
+            text-align: right;
+            margin-bottom: 5px;
+        }
+
+        button {
+            width: 60px;
+            height: 60px;
+            font-size: 25px;
+        }
+    </style>
+
+    <script>
+    #val
+        function display(val) {
+            document.getElementById("result").value += val;
+        }
+
+        function clearAll() {
+            document.getElementById("result").value = "";
+        }
+
+        function clearEntry() {
+            let x = document.getElementById("result").value;
+            document.getElementById("result").value = x.slice(0, -1);
+        }
+
+        function calculate() {
+            let x = document.getElementById("result").value;
+            document.getElementById("result").value = eval(x);
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <h2 align="center">Simple Calculator</h2>
+
+    <div class="calculator">
+        #result
+
+        <input type="text" id="result" readonly>
+
+        <table>
+
+            <tr>
+                <td><button onclick="clearAll()">AC</button></td>
+                <td><button onclick="clearEntry()">CE</button></td>
+                <td><button onclick="display('%')">%</button></td>
+                <td><button onclick="display('/')">/</button></td>
+            </tr>
+
+            <tr>
+                <td><button onclick="display('7')">7</button></td>
+                <td><button onclick="display('8')">8</button></td>
+                <td><button onclick="display('9')">9</button></td>
+                <td><button onclick="display('*')">*</button></td>
+            </tr>
+
+            <tr>
+                <td><button onclick="display('4')">4</button></td>
+                <td><button onclick="display('5')">5</button></td>
+                <td><button onclick="display('6')">6</button></td>
+                <td><button onclick="display('-')">-</button></td>
+            </tr>
+
+            <tr>
+                <td><button onclick="display('1')">1</button></td>
+                <td><button onclick="display('2')">2</button></td>
+                <td><button onclick="display('3')">3</button></td>
+                <td><button onclick="display('+')">+</button></td>
+            </tr>
+
+            <tr>
+                <td><button onclick="display('0')">0</button></td>
+                <td><button onclick="display('.')">.</button></td>
+                <td><button onclick="display('00')">00</button></td>
+                <td><button onclick="calculate()">=</button></td>
+            </tr>
+
+        </table>
+
+    </div>
+
+</body>
+
+</html>
+
+
+7b
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Information Form</title>
+    <style>
+        body {
+
+            background-color: whitesmoke;
+        }
+
+        .container {
+            width: 70%;
+            padding: 20px;
+            margin: auto;
+            background-color: white;
+            border-radius: 20px;
+        }
+
+        input[type=text],
+        input[type=email],
+        select,
+        textarea {
+            margin: auto;
+            padding: 8px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+
+    <script>
+
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var mobile = document.getElementById("mobile").value;
+            var gender = document.getElementById("gender").value;
+            var color = document.getElementById("color").value;
+
+            // Name validation
+            if (name == "") {
+                alert("Please enter your name");
+                return;
+            }
+
+            // Email validation
+            if (email == "") {
+                alert("Please enter your email");
+                return;
+            }
+
+            if (!email.includes("@") || !email.includes(".")) {
+                alert("Enter email correctly");
+                return;
+            }
+
+            // Mobile validation
+            if (mobile == "" || mobile.length != 10 || isNaN(mobile)) {
+                alert("Please enter mobile number correctly");
+                return;
+            }
+
+            // Gender validation
+            if (gender == "") {
+                alert("Please select your gender");
+                return;
+            }
+
+            // Display entered details
+            document.getElementById("output").value =
+                "Name : " + name + "\n" +
+                "Email : " + email + "\n" +
+                "Mobile Number : " + mobile + "\n" +
+                "Gender : " + gender + "\n" +
+                "Favorite Color : " + color;
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <h2 align="center">Student Information Form</h2>
+    <div class="container">
+        Name :<br>
+        <input type="text" id="name">
+        <br><br>
+
+        Email :<br>
+        <input type="email" id="email">
+        <br><br>
+
+        Mobile Number :<br>
+        <input type="text" id="mobile">
+        <br><br>
+
+        Gender :<br>
+        <select id="gender">
+            <option value="">Select</option>
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+
+        <br><br>
+
+        Favorite Color :<br>
+        <input type="color" id="color">
+
+        <br><br>
+        <textarea rows="10" id="output">
+</textarea>
+#onclck
+        <button onclick="validateForm()">
+            Submit
+        </button>
+    </div>
+</body>
+
+</html>
