@@ -37,3 +37,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 </body>
 </html>
 ##info.txt
+##1.Create into.txt and index.php file code accordingly. in Same directory. 
+2. change the file.txt modo. 
+>chmat info.txt 777 
+3. Go to browser and execute the filename.php. 
